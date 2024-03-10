@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+div>a>img{
+    height: 20vh;
+    width: auto;
+    margin: 20px;
+}
+.slick-slider{
+    display: flex !important;
+    align-items: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #272727;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+p,img{
+    display: inline-block;
+}
+p{
+    margin-left: 10px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    font: inherit;
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    width: 10%;
+    object-fit: contain;
+}
+article{
+    background-color: #272727;
+    display: block;
+    justify-content: center;
+    border: 1px solid #fff;
+    margin: 3.5% 15%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 5vw;
+    border: 1px solid #fff;
+    align-items: center;
+    
+}
+
+.header_logo {
+    width: 5vw;
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;}
+.list_item{
+    text-size-adjust: auto;}
+.prolog{
+    text-align: center;
+    font-size: 28px;
+    display: block;
+    
+}
+
+
+
+
+    /*Бургер*/
+    .burger-menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        transition: 0.3s ease;
+    }
+
+    .burger-menu::before,
+    .burger-menu::after {
+        content: ''; /* пустой контент */
+        background: #fff; /*цвет бургера*/
+        position: absolute; /* позиция для общего блока*/
+        width: 100%; /* ширина*/
+        height: 2px; /* толщина полосок бургера */
+        transition: 0.3s ease;
+    }
+
+    .burger-menu::before {
+        top: 0; /* расположение верхней линии бургера */
+    }
+
+    .burger-menu span { /*средняя линия в виде span*/
+        background: #fff;
+        position: absolute; 
+        width: 100%;
+        top: 9px;
+        height: 2px; 
+    }
+    .burger-menu::after {
+        bottom: 0; /* расположение нижней линии бургера */
+    }
+    .alttext{
+        font-size: 18px;
+    }
+    /*Меню*/
+    .main-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 13vw;
+        height: 23vh;
+        background: #272727;
+        border: 1px solid #fff;
+        padding: 20px 10px;
+        transform: translateX(100%);
+        z-index: 3;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: end;
+    }
+    /* active */
+
+    .burger-menu.active {
+        z-index: 4;
+        transform: translateX(-6.5vw);
+        transition: 0.3s ease;
+    }
+
+    .burger-menu.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+        transition: 0.3s ease;
+    }
+    .burger-menu.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        transition: 0.3s ease;
+    }
+
+    .burger-menu.active span {
+        transform: scale(0);
+    }
+
+    .main-nav.active {
+       transform: translate(0);
+       transition: 0.3s ease;
+    }
+
+
+
